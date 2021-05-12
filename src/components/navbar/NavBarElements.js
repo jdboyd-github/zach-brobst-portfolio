@@ -3,8 +3,8 @@ import { Link as LinkS } from 'react-scroll'
 
 export const Nav = styled.nav`
     background: transparent;
-    height: 80px;
-    margin-top: -80px;
+    height: 150px;
+    margin-top: -150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +63,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkS)`
-    color: #fff;
+    color: #5c5c5c;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -73,6 +73,12 @@ export const NavLinks = styled(LinkS)`
 
     &.active {
         color: #ff7070;
+        transition: color 0.3s ease-in;
+    }
+
+    :not(&.active) {
+        color: #5c5c5c;
+        transition: color 0.3s ease-out;
     }
 `;
 

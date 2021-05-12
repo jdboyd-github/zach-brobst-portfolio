@@ -1,25 +1,17 @@
 import styled from 'styled-components'
+import Waves from '../../images/waves.png'
+import Background from '../../images/background.png'
 
 export const HeroContainer = styled.div`
-    background: #0c0c0c;
+    background: url('${ Background }');
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 0px;
     height: 100vh;
     position: relative;
+    background-position: center;
     z-index: 1;
-`;
-
-export const HeroBg = styled.div`
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
 `;
 
 export const HeroContent = styled.div`
@@ -44,4 +36,12 @@ export const HeroH1 = styled.h1`
     @media screen and (max-width: 480px) {
         font-size: 32px;
     }
+`;
+
+export const HeroBg = styled.div`
+    background: url(${ Waves });
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
 `;
